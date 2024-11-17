@@ -1,1 +1,31 @@
-<p>ejercicio4 works!</p>
+<div class="container mt-4">
+    <div class="text-center mb-4">
+      <h3 class="p-2 bg-danger text-white d-inline-block rounded">4. Calculando cuadrados y mitades</h3>
+    </div>
+  
+    <div class="card shadow-sm border-danger">
+      <div class="card-body">
+        <button class="btn btn-danger w-100 mb-4" (click)="calcular()">Calcular</button>
+  
+        <div class="table-responsive">
+          <table class="table table-bordered text-center">
+            <thead class="table-danger">
+              <tr>
+                <th>Número</th>
+                <th>Cuadrado</th>
+                <th>Mitad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let numero of resultados.numeros; let i = index">
+                <td>{{ numero }}</td>
+                <td>{{ resultados.cuadrados[i] }}</td>
+                <td>{{ resultados.mitades[i] | number:'1.1-1' }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
