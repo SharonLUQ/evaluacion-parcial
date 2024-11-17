@@ -1,1 +1,28 @@
-<p>ejercicio2 works!</p>
+<div class="container mt-5">
+    <div class="alert alert-info text-center mb-4">
+      <h3>2. Calculando el número mayor</h3>
+    </div>
+    <div class="card shadow-sm mb-4">
+      <div class="card-header bg-success text-white">
+        <h5>Números ingresados:</h5>
+      </div>
+      <div class="card-body">
+        <p>Número 1: {{ numero1 }}</p>
+        <p>Número 2: {{ numero2 }}</p>
+        <p>Número 3: {{ numero3 }}</p>
+        <p>Número 4: {{ numero4 }}</p>
+      </div>
+      <div class="card-footer text-center">
+        <button class="btn btn-warning" (click)="calcularMayor()">Calcular</button>
+      </div>
+    </div>
+    <div *ngIf="resultado" class="card shadow-sm">
+      <div class="card-header bg-info text-white">
+        <h5>Resultado:</h5>
+      </div>
+      <div class="card-body">
+        <p>El número mayor es: <strong>{{ mayor }}</strong></p>
+      </div>
+    </div>
+  </div>
+  
