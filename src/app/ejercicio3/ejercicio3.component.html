@@ -1,1 +1,36 @@
-<p>ejercicio3 works!</p>
+<div class="container mt-5">
+    <div class="bg-info text-white text-center py-3 mb-4">
+      <h3>3. Costo de matrícula según el número de materias</h3>
+    </div>
+  
+    <div class="card shadow mb-4">
+      <div class="card-header bg-primary text-white">
+        <h5>Ingresar el número de materias</h5>
+      </div>
+      <div class="card-body">
+        <label for="materias" class="form-label">Materias:</label>
+        <input 
+          id="materias"
+          type="number"
+          class="form-control"
+          (input)="materias = +materiasInput.value"
+          #materiasInput
+          placeholder="Ingresar cantidad"
+        />
+      </div>
+      <div class="card-footer text-center">
+        <button class="btn btn-warning" (click)="calcularMatricula()">Calcular matrícula</button>
+      </div>
+    </div>
+  
+    <div class="card shadow-sm" *ngIf="resultadoVisible">
+      <div class="card-header bg-success text-white">
+        <h5>Resultado:</h5>
+      </div>
+      <div class="card-body">
+        <p>Costo total: <strong>S/. {{ total | number:'1.2-2' }}</strong></p>
+      </div>
+    </div>
+  </div>
+  
+
